@@ -6,9 +6,15 @@ on:
       - main
 
 jobs:
-    build:
-      runs-on: ubuntu-20.04
-      steps:
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - uses: actions/checkout@v2
-        - run: echo "hello world!"
+  deploy-test-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3  
+      with:
+        personal_token: ${{ secrets.PKEY }}
+        external_repository: sInt3g3r/ToEnder-Deploy
+        publish_branch: main
+        publish_dir: ./frontend/src
