@@ -14,7 +14,7 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3  
       with:
-        personal_token: ${{ secrets.PKEY }}
+        deploy_key: ${{ secrets.PKEY }}
         external_repository: sInt3g3r/ToEnder-Deploy
         publish_branch: main
         publish_dir: ./frontend/src
