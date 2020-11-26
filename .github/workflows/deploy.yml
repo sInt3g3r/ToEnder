@@ -15,6 +15,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3  
       with:
         deploy_key: ${{ secrets.PKEY }}
-        external_repository: sInt3g3r/ToEnder-Deploy
+        external_repository: sInt3g3r/sInt3g3r.github.io
         publish_branch: main
         publish_dir: ./frontend/src
